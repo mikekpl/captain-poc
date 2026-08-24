@@ -1,0 +1,76 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  /* Values as R G B channels so Tailwind opacity modifiers (bg-primary/10) work */
+  --background: 249 250 251;
+  --foreground: 17 24 39;
+  --card: 255 255 255;
+  --card-foreground: 17 24 39;
+  --primary: 29 78 216;
+  --primary-foreground: 255 255 255;
+  --secondary: 243 244 246;
+  --secondary-foreground: 55 65 81;
+  --muted: 243 244 246;
+  --muted-foreground: 107 114 128;
+  --accent: 239 246 255;
+  --accent-foreground: 30 64 175;
+  --destructive: 220 38 38;
+  --destructive-foreground: 255 255 255;
+  --border: 229 231 235;
+  --input: 229 231 235;
+  --ring: 59 130 246;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  background-color: rgb(var(--background));
+  color: rgb(var(--foreground));
+}
+
+/* Styles for rendered Captain API chunk content */
+.chunk-content {
+  font-size: 0.875rem;
+  line-height: 1.6;
+  color: rgb(17 24 39);
+}
+.chunk-content h2 { font-size: 1rem; font-weight: 700; margin: 0.75rem 0 0.25rem; }
+.chunk-content h3 { font-size: 0.9375rem; font-weight: 600; margin: 0.5rem 0 0.25rem; }
+.chunk-content h4 { font-size: 0.875rem; font-weight: 600; margin: 0.5rem 0 0.125rem; }
+.chunk-content p  { margin: 0 0 0.5rem; }
+.chunk-content p:last-child { margin-bottom: 0; }
+.chunk-content ul, .chunk-content ol { padding-left: 1.25rem; margin: 0.25rem 0 0.5rem; }
+.chunk-content li { margin: 0.125rem 0; }
+.chunk-content strong { font-weight: 600; }
+.chunk-content em    { font-style: italic; }
+
+.chunk-content table {
+  width: 100%;
+  border-collapse: collapse;
+  font-size: 0.8125rem;
+  margin: 0.5rem 0;
+  overflow-x: auto;
+  display: block;
+}
+.chunk-content th {
+  background-color: rgb(243 244 246);
+  border: 1px solid rgb(229 231 235);
+  padding: 0.375rem 0.625rem;
+  text-align: left;
+  font-weight: 600;
+  color: rgb(55 65 81);
+  white-space: nowrap;
+}
+.chunk-content td {
+  border: 1px solid rgb(229 231 235);
+  padding: 0.375rem 0.625rem;
+  color: rgb(75 85 99);
+  vertical-align: top;
+}
+.chunk-content tr:nth-child(even) td {
+  background-color: rgb(249 250 251);
+}

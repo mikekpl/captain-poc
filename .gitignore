@@ -1,0 +1,19 @@
+# Environment — never commit API keys
+.env
+.env.local
+.env*.local
+
+# Dependencies & build output
+node_modules/
+.next/
+dist/
+*.log
+tsconfig.tsbuildinfo
+
+# OS
+.DS_Store
+
+# GitHub Copilot / Speckit AI planning artifacts
+.github/
+.specify/
+specs/
